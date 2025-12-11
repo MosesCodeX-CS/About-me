@@ -3,31 +3,31 @@ import { FaStar, FaQuoteLeft } from "react-icons/fa";
 
 const testimonials = [
   {
-    text: "Moses transformed our outdated system into a modern, efficient platform. His expertise in both development and deployment is unmatched! He delivered ahead of schedule and provided ongoing support that ensured our team adapted seamlessly.",
-    name: "Jane Doe",
-    position: "CEO of HealthTech",
-    image: "https://randomuser.me/api/portraits/women/45.jpg",
-    rating: 5
-  },
-  {
-    text: "Working with Moses was a game-changer. The POS system he built for our hotel streamlined operations and boosted our revenue by 30%. His proactive communication and attention to detail made the entire process effortless.",
+    text: "Moses designed and implemented a robust WiFi hotspot system for our hotel that has significantly improved our guest experience. The system is reliable, easy to manage, and provides valuable analytics. His technical expertise and professionalism were evident throughout the project.",
     name: "Stellah Nyabute",
     position: "Bellamy Hotel Manager",
     image: "/images/image5.png",
     rating: 5
   },
   {
-    text: "His attention to detail and proactive communication made the project a success. We've already contracted him for two more projects! Moses's ability to anticipate our needs and deliver scalable solutions is truly exceptional.",
-    name: "Emily Carter",
-    position: "EduSys Director",
-    image: "https://randomuser.me/api/portraits/women/68.jpg",
+    text: "Working with Moses was a game-changer. The POS system he built for our hotel streamlined operations and boosted our revenue by 30%. His proactive communication and attention to detail made the entire process effortless. The system handles our high transaction volume with zero downtime.",
+    name: "Stellah Nyabute",
+    position: "Bellamy Hotel Manager",
+    image: "/images/image5.png",
     rating: 5
   },
   {
-    text: "Moses created a custom e-commerce solution that perfectly matched our brand vision. The site's performance is exceptional, and our conversion rates have increased by 45% since launch. His technical knowledge combined with business acumen is rare and invaluable.",
-    name: "Robert Chen",
-    position: "Marketing Director, FashionHub",
-    image: "https://randomuser.me/api/portraits/men/32.jpg",
+    text: "Moses's menu design for our hotel restaurant was exceptional. He perfectly captured our brand's elegance while creating a menu that's both beautiful and highly functional. The new design improved order accuracy by 40% and received numerous compliments from our guests. His attention to detail and creative approach made all the difference.",
+    name: "Stellah Nyabute",
+    position: "Bellamy Hotel Manager",
+    image: "/images/image5.png",
+    rating: 5
+  },
+  {
+    text: "Moses has been instrumental in building our digital presence at Primenova Technologies. From designing our website to creating eye-catching marketing materials, his work has helped us establish a strong brand identity. His attention to detail and creative approach to advertising has significantly boosted our market visibility.",
+    name: "Primenova Technologies",
+    position: "Marketing & Branding",
+    image: "/images/profile/Profile.png",
     rating: 5
   }
 ];
@@ -37,8 +37,12 @@ const TestimonialsSection = () => (
     <div className="container mx-auto">
       <div className="text-center mb-12">
         <span className="text-cyan-400 text-lg font-semibold uppercase tracking-wide block mb-2">What Clients Say About Me</span>
-        <h2 className="text-4xl font-bold mb-3">Trusted by Industry Leaders</h2>
-        <p className="text-lg text-gray-300">Hear from clients who've experienced the value I bring to their projects:</p>
+        <h2 className="text-4xl font-extrabold mb-3 drop-shadow">Client Success Stories</h2>
+        <p className="text-lg text-gray-200">From technical solutions to creative design, see how I've helped businesses grow:</p>
+        <div className="mt-6 bg-gray-800/50 p-4 rounded-lg max-w-3xl mx-auto">
+          <p className="text-cyan-200 font-medium">Primenova Technologies</p>
+          <p className="text-gray-300">Delivering comprehensive digital solutions including website development, marketing materials, and brand identity design.</p>
+        </div>
         <div className="w-24 h-1 bg-cyan-400 mx-auto mt-4 rounded-full"></div>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
