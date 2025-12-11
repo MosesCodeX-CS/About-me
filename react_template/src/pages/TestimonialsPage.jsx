@@ -1,38 +1,73 @@
-import React from "react";
+import React, { useState } from "react";
 import { FaStar, FaQuoteLeft } from "react-icons/fa";
+import ImageModal from "../components/UI/ImageModal";
 
 const testimonials = [
   {
-    text: "Moses designed and implemented a robust WiFi hotspot system for our hotel that has significantly improved our guest experience. The system is reliable, easy to manage, and provides valuable analytics. His technical expertise and professionalism were evident throughout the project.",
+    text: "Moses designed and implemented a robust WiFi hotspot system for our hotel that has significantly improved our guest experience. The system is reliable, easy to manage, and provides valuable analytics. His technical expertise and professionalism were evident throughout project.",
     name: "Stellah Nyabute",
     position: "Bellamy Hotel Manager",
-    image: "/images/image5.png",
-    rating: 5
-  },
-  {
-    text: "Working with Moses was a game-changer. The POS system he built for our hotel streamlined operations and boosted our revenue by 30%. His proactive communication and attention to detail made the entire process effortless. The system handles our high transaction volume with zero downtime.",
-    name: "Stellah Nyabute",
-    position: "Bellamy Hotel Manager",
-    image: "/images/image5.png",
-    rating: 5
-  },
-  {
-    text: "Moses's menu design for our hotel restaurant was exceptional. He perfectly captured our brand's elegance while creating a menu that's both beautiful and highly functional. The new design improved order accuracy by 40% and received numerous compliments from our guests. His attention to detail and creative approach made all the difference.",
-    name: "Stellah Nyabute",
-    position: "Bellamy Hotel Manager",
-    image: "/images/image5.png",
-    rating: 5
+    image: "/assets/images/mom.jpeg",
+    rating: 5,
+    contact: {
+      phone: "+254724228479",
+      email: "StellaNyabute@gmail.com",
+      address: "Bellamy Hotel, Kijabe, Kenya"
+    }
   },
   {
     text: "Moses has been instrumental in building our digital presence at Primenova Technologies. From designing our website to creating eye-catching marketing materials, his work has helped us establish a strong brand identity. His attention to detail and creative approach to advertising has significantly boosted our market visibility.",
     name: "Primenova Technologies",
     position: "Marketing & Branding",
     image: "/images/profile/Profile.png",
-    rating: 5
+    rating: 5,
+    contact: {
+      phone: "+254724228479",
+      email: "primenova@example.com",
+      address: "Nairobi, Kenya"
+    }
+  },
+  {
+    text: "Working with Moses was a game-changer. The POS system he built for our hotel streamlined operations and boosted our revenue by 30%. His proactive communication and attention to detail made the entire process effortless. The system handles our high transaction volume with zero downtime.",
+    name: "Stellah Nyabute",
+    position: "Bellamy Hotel Manager",
+    image: "/assets/images/mom.jpeg",
+    rating: 5,
+    contact: {
+      phone: "+254724228479",
+      email: "StellaNyabute@gmail.com",
+      address: "Bellamy Hotel, Kijabe, Kenya"
+    }
+  },
+  {
+    text: "Moses's menu design for our hotel restaurant was exceptional. He perfectly captured our brand's elegance while creating a menu that's both beautiful and highly functional. The new design improved order accuracy by 40% and received numerous compliments from our guests. His attention to detail and creative approach made all the difference.",
+    name: "Stellah Nyabute",
+    position: "Bellamy Hotel Manager",
+    image: "/assets/images/mom.jpeg",
+    rating: 5,
+    contact: {
+      phone: "+254724228479",
+      email: "StellaNyabute@gmail.com",
+      address: "Bellamy Hotel, Kijabe, Kenya"
+    }
   }
 ];
 
-const TestimonialsSection = () => (
+const TestimonialsSection = () => {
+  const [modalOpen, setModalOpen] = useState(false);
+  const [selectedTestimonial, setSelectedTestimonial] = useState(null);
+
+  const openModal = (testimonial) => {
+    setSelectedTestimonial(testimonial);
+    setModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalOpen(false);
+    setSelectedTestimonial(null);
+  };
+
+  return (
   <section id="testimonials" className="py-20 px-4 bg-gradient-to-b from-gray-950 to-gray-900 text-white">
     <div className="container mx-auto">
       <div className="text-center mb-12">
@@ -43,6 +78,12 @@ const TestimonialsSection = () => (
           <p className="text-cyan-200 font-medium">Primenova Technologies</p>
           <p className="text-gray-300">Delivering comprehensive digital solutions including website development, marketing materials, and brand identity design.</p>
         </div>
+        <div className="mt-4 text-center">
+          <p className="text-sm text-gray-400 flex items-center justify-center gap-2">
+            <span className="inline-block w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></span>
+            Click on any profile image to view contact details
+          </p>
+        </div>
         <div className="w-24 h-1 bg-cyan-400 mx-auto mt-4 rounded-full"></div>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -50,20 +91,53 @@ const TestimonialsSection = () => (
           <div key={idx} className="bg-gray-800/70 border border-gray-700 rounded-xl shadow-lg p-8 flex flex-col items-center text-center h-full">
             <FaQuoteLeft className="text-cyan-400 text-3xl mb-4" />
             <p className="italic text-lg mb-4">"{t.text}"</p>
-            <img src={t.image} alt={t.name} className="rounded-full w-16 h-16 mb-3 object-cover border-2 border-cyan-400" loading="lazy" />
+            <div 
+              className="relative w-16 h-16 mb-3 rounded-full overflow-hidden border-2 border-cyan-400 cursor-pointer hover:border-cyan-300 transition-all transform hover:scale-105 group"
+              onClick={() => openModal(t)}
+              title={`Click to view ${t.name}'s profile and contact details`}
+            >
+              <img 
+                src={t.image} 
+                alt={t.name} 
+                className="w-full h-full object-cover object-center" 
+                style={{ objectPosition: 'center 25%' }}
+                loading="lazy" 
+              />
+              <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 flex items-center justify-center">
+                <span className="text-white text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-medium">View Profile</span>
+              </div>
+            </div>
             <h6 className="font-bold text-white text-lg mb-1">{t.name}</h6>
             <p className="text-cyan-200 mb-2">{t.position}</p>
             <div className="flex justify-center mt-2 text-yellow-400">
               {[...Array(t.rating)].map((_, i) => <FaStar key={i} />)}
             </div>
+            <button
+              onClick={() => openModal(t)}
+              className="mt-4 px-4 py-2 bg-cyan-600 text-white text-sm rounded-full hover:bg-cyan-700 transition-colors flex items-center gap-2"
+            >
+              <span>View Profile</span>
+            </button>
           </div>
         ))}
       </div>
       <div className="text-center mt-12">
         <a href="/contact#contact" className="inline-block px-8 py-3 bg-cyan-600 text-white rounded-full font-semibold hover:bg-cyan-700 transition">Get Your Project Started</a>
       </div>
+      
+      {modalOpen && selectedTestimonial && (
+        <ImageModal
+          isOpen={modalOpen}
+          onClose={closeModal}
+          image={selectedTestimonial.image}
+          name={selectedTestimonial.name}
+          position={selectedTestimonial.position}
+          contact={selectedTestimonial.contact}
+        />
+      )}
     </div>
   </section>
-);
+  );
+};
 
 export default TestimonialsSection;
