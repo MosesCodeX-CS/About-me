@@ -24,7 +24,14 @@ const Footer = () => {
                 Moses
               </span>
             </Link>
-            <p className="text-gray-300 mt-2 mb-4 md:mb-0">Software Developer & DevOps Engineer</p>
+            <p className="text-gray-300 mt-2 mb-4 md:mb-0">Software Developer | Full-Stack Web & Systems Specialist</p>
+            <a
+              href="/assets/cv/Moses_Mwangi_CV.pdf"
+              download
+              className="inline-block mt-3 px-4 py-2 text-sm rounded-lg bg-cyan-600 text-white font-semibold hover:bg-cyan-700 transition-colors"
+            >
+              Download CV
+            </a>
           </div>
           <div>
             <h5 className="font-semibold text-cyan-400 mb-2">Quick Links</h5>
@@ -44,13 +51,17 @@ const Footer = () => {
               <a href="https://github.com/MosesCodeX-CS" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="text-gray-300 hover:text-cyan-400 transition-colors">
                 <i className="fab fa-github fa-lg"></i>
               </a>
-              <a href="https://linkedin.com/in/moses-mwangi" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-gray-300 hover:text-cyan-400 transition-colors">
+              <a href="https://linkedin.com/in/moses-mwangi-a5a2a9316" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-gray-300 hover:text-cyan-400 transition-colors">
                 <i className="fab fa-linkedin fa-lg"></i>
               </a>
               <a href="mailto:mwangimoses372@gmail.com" aria-label="Email" className="text-gray-300 hover:text-cyan-400 transition-colors">
                 <i className="fas fa-envelope fa-lg"></i>
               </a>
+              <a href="tel:+254742784172" aria-label="Phone" className="text-gray-300 hover:text-cyan-400 transition-colors">
+                <i className="fas fa-phone fa-lg"></i>
+              </a>
             </div>
+            <p className="text-gray-500 text-xs">Kijabe, Kenya</p>
             <p className="text-gray-500 text-xs">&copy; {currentYear} Moses. All rights reserved.</p>
           </div>
         </div>

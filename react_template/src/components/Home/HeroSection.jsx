@@ -39,8 +39,8 @@ const HeroSection = () => (
       transition={{ delay: 0.2, duration: 1, type: 'spring', bounce: 0.25 }}
       className="text-3xl sm:text-4xl md:text-6xl font-extrabold mb-2 drop-shadow bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent"
     >
-      <span className="block">Moses</span>
-      <span className="block text-white">Software Developer</span>
+      <span className="block">Moses Mwangi Kamau</span>
+      <span className="block text-white">Software Developer | Full-Stack Web & Systems Specialist</span>
     </motion.h1>
     {/* Tech icons row */}
     <motion.div
@@ -65,7 +65,7 @@ const HeroSection = () => (
       transition={{ delay: 0.5, duration: 0.8 }}
       className="text-base sm:text-lg md:text-xl text-cyan-200 font-medium mb-8 drop-shadow max-w-xl mx-auto"
     >
-      Crafting elegant solutions through code and creativity
+      I design and ship reliable, secure full-stack solutions that solve real business problems—combining clean code, rigorous testing, and clear communication.
     </motion.p>
     <motion.div
       initial={{ opacity: 0, scale: 0.8 }}
@@ -80,7 +80,14 @@ const HeroSection = () => (
         View Projects
       </a>
       <a
-        href="#contact"
+        href="/assets/cv/Moses_Mwangi_CV.pdf"
+        download
+        className="px-7 py-3 bg-transparent border-2 border-cyan-400 rounded-full text-cyan-200 font-semibold text-lg shadow-lg hover:bg-cyan-600 hover:text-white hover:border-cyan-600 transition-all duration-200 animate-glow"
+      >
+        Download CV
+      </a>
+      <a
+        href="/contact#contact"
         className="px-7 py-3 bg-transparent border-2 border-cyan-400 rounded-full text-cyan-200 font-semibold text-lg shadow-lg hover:bg-cyan-600 hover:text-white hover:border-cyan-600 transition-all duration-200 animate-glow"
       >
         Contact Me

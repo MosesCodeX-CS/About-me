@@ -25,28 +25,37 @@ const Header = () => {
             </span>
           </Link>
 
-          <ul className="flex space-x-6">
-            {navItems.map((item) => (
-              <li key={item.label}>
-                <Link
-                  to={item.to}
-                  className={`relative ${
-                    location.pathname === item.to
-                      ? 'text-cyan-400'
-                      : 'text-gray-300 hover:text-white'
-                  } transition-colors`}
-                >
-                  {item.label}
-                  {location.pathname === item.to && (
-                    <motion.div
-                      className="absolute -bottom-1 left-0 right-0 h-0.5 bg-cyan-400"
-                      layoutId="underline"
-                    />
-                  )}
-                </Link>
-              </li>
-            ))}
-          </ul>
+          <div className="flex items-center gap-6">
+            <ul className="flex space-x-6">
+              {navItems.map((item) => (
+                <li key={item.label}>
+                  <Link
+                    to={item.to}
+                    className={`relative ${
+                      location.pathname === item.to
+                        ? 'text-cyan-400'
+                        : 'text-gray-300 hover:text-white'
+                    } transition-colors`}
+                  >
+                    {item.label}
+                    {location.pathname === item.to && (
+                      <motion.div
+                        className="absolute -bottom-1 left-0 right-0 h-0.5 bg-cyan-400"
+                        layoutId="underline"
+                      />
+                    )}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+            <a
+              href="/assets/cv/Moses_Mwangi_CV.pdf"
+              download
+              className="hidden md:inline-flex px-4 py-2 rounded-full text-sm font-semibold bg-cyan-600 text-white hover:bg-cyan-700 transition-colors border border-cyan-400/40"
+            >
+              Download CV
+            </a>
+          </div>
         </nav>
       </div>
     </header>

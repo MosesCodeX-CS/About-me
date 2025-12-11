@@ -56,7 +56,7 @@ const TestimonialsSection = () => (
         ))}
       </div>
       <div className="text-center mt-12">
-        <a href="#contact" className="inline-block px-8 py-3 bg-cyan-600 text-white rounded-full font-semibold hover:bg-cyan-700 transition">Get Your Project Started</a>
+        <a href="/contact#contact" className="inline-block px-8 py-3 bg-cyan-600 text-white rounded-full font-semibold hover:bg-cyan-700 transition">Get Your Project Started</a>
       </div>
     </div>
   </section>

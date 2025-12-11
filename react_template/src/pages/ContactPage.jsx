@@ -10,7 +10,6 @@ const ContactPage = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Add your form submission logic here
     console.log('Form submitted:', formData);
   };
 
@@ -22,7 +21,7 @@ const ContactPage = () => {
   };
 
   return (
-    <section className="py-20 px-4">
+    <section className="py-20 px-4 bg-gradient-to-br from-gray-900 to-indigo-950 text-white" id="contact">
       <div className="container mx-auto max-w-2xl">
         <motion.h1 
           className="text-4xl font-bold text-center mb-12"
@@ -35,7 +34,7 @@ const ContactPage = () => {
         </motion.h1>
 
         <motion.div
-          className="bg-gray-800/50 rounded-xl p-8"
+          className="bg-gray-800/60 rounded-xl p-8 border border-gray-700"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1 }}
@@ -104,15 +103,21 @@ const ContactPage = () => {
           transition={{ delay: 0.2 }}
         >
           <p className="text-gray-300 mb-4">Or reach out directly:</p>
-          <div className="flex justify-center space-x-6">
+          <div className="flex flex-wrap justify-center gap-4 text-sm font-medium">
             <a
-              href="mailto:your.email@example.com"
+              href="mailto:mwangimoses372@gmail.com"
               className="text-cyan-400 hover:text-cyan-300 transition-colors"
             >
-              Email
+              mwangimoses372@gmail.com
             </a>
             <a
-              href="https://linkedin.com/in/yourusername"
+              href="tel:+254742784172"
+              className="text-cyan-400 hover:text-cyan-300 transition-colors"
+            >
+              +254 742 784 172
+            </a>
+            <a
+              href="https://linkedin.com/in/moses-mwangi-a5a2a9316"
               target="_blank"
               rel="noopener noreferrer"
               className="text-cyan-400 hover:text-cyan-300 transition-colors"
@@ -120,7 +125,7 @@ const ContactPage = () => {
               LinkedIn
             </a>
             <a
-              href="https://github.com/yourusername"
+              href="https://github.com/MosesCodeX-CS"
               target="_blank"
               rel="noopener noreferrer"
               className="text-cyan-400 hover:text-cyan-300 transition-colors"

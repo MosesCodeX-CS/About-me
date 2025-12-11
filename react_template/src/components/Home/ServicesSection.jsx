@@ -3,99 +3,82 @@ import { FaLaptopCode, FaCode, FaNetworkWired, FaPalette, FaChalkboardTeacher, F
 
 const services = [
   {
-    category: 'support',
-    icon: <FaLaptopCode className="text-primary text-4xl mb-3 mx-auto" />, 
-    title: "Computer & Tech Support",
-    short: "Professional hardware and software solutions to keep your systems running smoothly.",
-    badges: ["Hardware Repair", "OS Installation", "Troubleshooting", "Performance Tuning"],
+    category: 'development',
+    icon: <FaCode className="text-green-500 text-4xl mb-3 mx-auto" />, 
+    title: "Full-Stack Web & API Development",
+    short: "Production-ready apps built with PHP, Python/Django, JavaScript, and REST APIs.",
+    badges: ["PHP", "Python/Django", "JavaScript", "REST APIs"],
     details: [
-      "Computer Repair & Maintenance",
-      "Windows/Linux Installation & Configuration",
-      "Software Installation & Troubleshooting",
-      "System Optimization & Cleanup",
-      "Virus & Malware Removal",
-      "Hardware Upgrades & Diagnostics",
-      "Data Backup & Recovery"
+      "Custom web applications with secure auth and role-based access",
+      "RESTful APIs and integrations with third-party services",
+      "Responsive frontends with Bootstrap and modern JS",
+      "Database design and optimization (MySQL/PostgreSQL)",
+      "Performance, security hardening, and testing before go-live"
     ]
   },
   {
     category: 'development',
-    icon: <FaCode className="text-green-500 text-4xl mb-3 mx-auto" />, 
-    title: "Web Development",
-    short: "Custom websites and applications built with modern technologies.",
-    badges: ["Responsive Design", "PHP/MySQL", "Hospital Systems", "LAMP Stack"],
+    icon: <FaMobileAlt className="text-gray-400 text-4xl mb-3 mx-auto" />, 
+    title: "POS & Billing Systems",
+    short: "End-to-end billing, payments, and inventory for retail, hospitality, and WiFi services.",
+    badges: ["POS", "Billing", "Inventory", "Reporting"],
     details: [
-      "Responsive Website Design (HTML/CSS/JavaScript)",
-      "PHP-MySQL Web Applications with CRUD Operations",
-      "Hospital Management System Development",
-      "Web Hosting & Apache Server Setup (LAMP stack)",
-      "Basic Authentication System Integration",
-      "Portfolio Website Creation",
-      "E-commerce Solutions"
+      "WiFi billing management with prepaid/postpaid options",
+      "Supermarket and hotel POS with receipts, stock, and user roles",
+      "Dashboarding and financial reporting for business insight",
+      "Deployment, training, and post-launch support"
+    ]
+  },
+  {
+    category: 'support',
+    icon: <FaLaptopCode className="text-primary text-4xl mb-3 mx-auto" />, 
+    title: "Technical Support & Maintenance",
+    short: "Keep systems healthy with proactive diagnostics, recovery, and upgrades.",
+    badges: ["Troubleshooting", "Data Recovery", "Upgrades", "QA"],
+    details: [
+      "Workstation and server troubleshooting (Windows/Linux)",
+      "OS installation, patching, and performance tuning",
+      "Backup/restore routines and incident documentation",
+      "Quality assurance checks to keep deployments 95%+ bug-free"
     ]
   },
   {
     category: 'support',
     icon: <FaNetworkWired className="text-cyan-400 text-4xl mb-3 mx-auto" />, 
     title: "Networking & Security",
-    short: "Secure network solutions with focus on data protection.",
-    badges: ["Network Setup", "WiFi Security", "Data Backup", "Linux Security"],
+    short: "Reliable connectivity with secure configurations and monitoring.",
+    badges: ["WiFi", "VPN", "Backups", "Hardening"],
     details: [
-      "Basic Network Setup & Configuration",
-      "MiFi Device Setup & Optimization",
-      "Data Backup & Encryption Solutions",
-      "Linux File Permissions & Security Basics",
-      "Wireless Network Security",
-      "VPN Setup & Configuration",
-      "Network Troubleshooting"
+      "Network setup, MiFi optimization, and VPN configuration",
+      "Wireless security and access controls",
+      "Data backup strategies with encryption",
+      "Linux permissions and basic hardening"
     ]
   },
   {
     category: 'design',
     icon: <FaPalette className="text-yellow-400 text-4xl mb-3 mx-auto" />, 
-    title: "Graphics & Design",
-    short: "Creative design solutions for branding and marketing.",
-    badges: ["Logo Design", "Posters", "Hotel Menus", "Business Cards"],
+    title: "UI/UX & Digital Presence",
+    short: "Polished, responsive interfaces that reflect your brand and drive conversion.",
+    badges: ["Responsive", "Branding", "Content", "SEO"],
     details: [
-      "Poster Creation for Events or Businesses",
-      "Basic Logo Design (Canva or similar tools)",
-      "Menu Book Design for Hotels/Restaurants",
-      "Business Card Design",
-      "Flyer & Brochure Design",
-      "Social Media Graphics",
-      "Basic Branding Packages"
+      "Landing pages, portfolios, and product sites",
+      "Lightweight branding assets (logos, social media graphics)",
+      "Content structure for clarity and trust",
+      "Baseline SEO and performance hygiene"
     ]
   },
   {
     category: 'consulting',
     icon: <FaChalkboardTeacher className="text-red-500 text-4xl mb-3 mx-auto" />, 
     title: "Training & Mentorship",
-    short: "IT training programs for individuals and teams.",
+    short: "Upskill teams on modern development, Git, and Linux fundamentals.",
     badges: ["Programming", "Web Dev", "Linux CLI", "Git/GitHub"],
     details: [
-      "Beginner ICT Lessons (MS Office, File Management)",
-      "Introduction to Programming (Python, C, PHP)",
-      "Ubuntu/Linux Command Line Basics",
-      "Git & GitHub Training for Beginners",
-      "Web Development Fundamentals",
-      "Database Management Basics",
-      "Career Guidance in Tech"
-    ]
-  },
-  {
-    category: 'development',
-    icon: <FaMobileAlt className="text-gray-400 text-4xl mb-3 mx-auto" />, 
-    title: "Mobile & Digital",
-    short: "Mobile optimization and digital presence solutions.",
-    badges: ["Android", "Social Media", "WhatsApp Business", "Digital Portfolio"],
-    details: [
-      "Android Device Optimization",
-      "WhatsApp Business Setup for Clients",
-      "Social Media Page Setup for Businesses",
-      "Digital Portfolio Creation Assistance",
-      "Mobile App Consultation",
-      "Basic SEO Setup",
-      "Online Presence Strategy"
+      "Programming fundamentals in Python, PHP, and JavaScript",
+      "Web development foundations with hands-on labs",
+      "Git/GitHub workflows and code review basics",
+      "Linux command-line essentials for developers"
     ]
   }
 ];
@@ -119,7 +102,7 @@ const ServicesSection = ({ homePreview }) => {
       <div className="container mx-auto">
         <div className="text-center mb-10">
           <h2 className="text-4xl font-extrabold mb-2 text-white drop-shadow">My <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Services</span></h2>
-          <p className={`text-lg ${homePreview ? 'text-cyan-200 font-medium drop-shadow' : 'text-gray-200'} `}>Comprehensive IT solutions tailored to your specific needs</p>
+          <p className={`text-lg ${homePreview ? 'text-cyan-200 font-medium drop-shadow' : 'text-gray-200'} `}>End-to-end solutions covering full-stack builds, infrastructure, and training.</p>
         </div>
         {/* Filters: Only show on full page */}
         {!homePreview && (
@@ -151,7 +134,7 @@ const ServicesSection = ({ homePreview }) => {
                 <button className="btn btn-primary btn-sm" onClick={() => setModal(service)}>
                   <span className="mr-1">ℹ️</span> Details
                 </button>
-                <a href="#contact" className="btn btn-success btn-sm">
+                <a href="/contact#contact" className="btn btn-success btn-sm">
                   <span className="mr-1">✉️</span> Request
                 </a>
               </div>
@@ -170,7 +153,7 @@ const ServicesSection = ({ homePreview }) => {
               </ul>
               <div className="flex justify-end gap-2">
                 <button className="btn btn-outline-primary" onClick={() => setModal(null)}>Close</button>
-                <a href="#contact" className="btn btn-success">Request Service</a>
+                <a href="/contact#contact" className="btn btn-success">Request Service</a>
               </div>
             </div>
           </div>
@@ -178,8 +161,8 @@ const ServicesSection = ({ homePreview }) => {
         {/* Call to Action */}
         <div className="text-center mt-16 p-8 md:p-12 bg-gradient-to-r from-cyan-700 to-blue-900 text-white rounded-2xl shadow-2xl border-2 border-cyan-400 z-30 relative flex flex-col items-center max-w-2xl mx-auto">
           <h3 className="text-2xl md:text-3xl font-extrabold mb-2 drop-shadow animate-pulse">Ready to Get Your Project Started?</h3>
-          <p className="mb-6 text-cyan-100 text-lg font-medium drop-shadow">Contact me today for a free, no-obligation consultation about your IT needs.</p>
-          <a href="#contact" className="btn btn-light btn-lg px-8 py-3 font-bold text-cyan-700 bg-white rounded-full shadow-lg hover:bg-cyan-100 transition-all text-lg animate-glow">Contact Now</a>
+          <p className="mb-6 text-cyan-100 text-lg font-medium drop-shadow">Book a free consultation to align on scope, tech stack, and delivery milestones.</p>
+          <a href="/contact#contact" className="btn btn-light btn-lg px-8 py-3 font-bold text-cyan-700 bg-white rounded-full shadow-lg hover:bg-cyan-100 transition-all text-lg animate-glow">Contact Now</a>
         </div>
       </div>
     </section>
