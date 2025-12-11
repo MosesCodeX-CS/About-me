@@ -22,7 +22,7 @@ const testimonials = [
     image: "/images/profile/Profile.png",
     rating: 5,
     contact: {
-      phone: "+254724228479",
+      phone: "+254742784172",
       email: "primenova@example.com",
       address: "Nairobi, Kenya"
     }
